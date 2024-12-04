@@ -1,0 +1,233 @@
+# Generic Example Site
+baseURL: "https://www.yatan.co"
+title: Yatan Blumenthal Vargas
+languageCode: en-us
+theme: PaperMod
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pluralizeListTitles: false
+
+# googleAnalytics: G-C4MCQHJQY0
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+#theme params
+# https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Yatan Blumenthal Vargas
+  # This is shown when website is posted in Discord and other socials
+  description: "Startups, VC, Emotional Intelligence, Mindfulness, Leadership"
+  keywords: [Blog, Portfolio, Meditation, Search Inside Yourself, Mindfulness, Adaptive Resilience]
+  # author: ["Me", "You"] # multiple authors
+  author: "Yatan Blumenthal Vargas"
+  images: ["/images/yatan-logomjsmtr.webp"]
+  DateFormat: "January 2, 2006"
+  # theme: dark, light
+  defaultTheme: auto 
+  disableThemeToggle: false
+
+  # Post configuration
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  # New, from PaperModX
+  TocSide: left
+# Enable KaTeX on every page globally. See blog post about setting up site
+  math: true
+  # Without this, archive doesn't show all pages
+  # See https://github.com/adityatelange/hugo-PaperMod/issues/912
+  # And https://github.com/adityatelange/hugo-PaperMod/commit/fc87fc3a29e8e515dff866159601a734e3ad4a2f
+  # Note from https://github.com/adityatelange/hugo-PaperMod/issues/702 that post must have date to be archived
+  ShowAllPagesInArchive: true
+  
+  # Copied from Jesse Wei but not working
+  # Necessary for post nav links to show up on /posts and /projects
+  # https://github.com/adityatelange/hugo-PaperMod/issues/940
+  #mainSections:
+  #  - posts
+  #  - projects
+  #  - teaching
+
+  assets:
+    # Disables highlight.js, using Hugo Chroma instead
+    # https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+    # Note: Do not enable this. May not work correctly due to some code theme changes made in or around
+    # https://github.com/jesse-wei/jessewei.dev-PaperMod/commit/bcadfdde8e12a2a9f9ed853f9939695797b31739
+    disableHLJS: true
+    # disableFingerprinting: true
+
+    # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#adding-custom-favicons
+    # static/ {favicon.ico, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, safari-pinned-tab.svg} automatically detected
+
+ # Logo and name shown on top left of site
+  label:
+    text: "Yatan"
+    icon: "/images/yatan-logomjsmtr.webp"
+    iconHeight: 35
+
+profileMode:
+# needs to be explicitly set true/false
+    enabled: true 
+    title: Hello! I am Yatan
+    subtitle: "I support startups through [Founder Institute](https://fi.co) and [Hardware.co](https://hardware.co).
+        Work for better team culture and communication through [Culture Design](https://culturedesign.org) & [Search Inside Yourself](http://siyli.org). 
+        And work in furthering Brain Health and finding a cure for Alzheimers through CerebrumDAO [CerebrumDAO](https://cerebrumdao.com)"
+    imageUrl: "images/yatan-logo.webp"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: Yatans Picture
+    buttons:
+      - name: Blog
+        url: posts
+      - name: Meditations
+        url: meditation
+      - name: Book a call 
+        url: cal
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hola, Hello, Hey"
+    Content: I am Yatan. I support startups through [Founder Institute](https://fi.co) and [Hardware.co](https://hardware.co).
+        Work for better team culture and communication through [Culture Design](https://culturedesign.org) & [Search Inside Yourself](search-inside-yourself) 
+        And I invest through [Infinita VC](https://infinitavc.com)"
+
+  socialIcons:
+    - name: linkedin
+      url: "http://linkedin.com/in/yatanblumenthal"
+    - name: twitter
+      url: "https://twitter.com/yatanbv"
+    - name: github
+      url: "https://github.com/yatanco"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  # Cover Images settings
+  cover:
+    linkFullImages: true
+    # Hide everywhere but not in structured data
+    hidden: false
+    # Hide in list view
+    hiddenInList: false
+    hiddenInSingle: true
+  
+
+
+  editPost:
+    URL: "https://github.com/yatanco/yatan.co"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# Source: https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: aboutme
+      name: About Me
+      url: about
+      weight: 5
+    - identifier: emotionalintelligence
+      name: Emotional Intelligence
+      url: emotional-intelligence
+      weight: 5
+    - identifier: searchinsideyourself
+      name: Search Inside Yourself
+      url: /search-inside-yourself
+      parent: emotionalintelligence
+      weight: 2 
+    - name: Blog
+      url: posts/
+      weight: 5
+    - name: Meditation
+      url: meditation/
+      weight: 5
+    - name: Archives
+      url: archives/
+      weight: 5
+
+   # - identifier: categories
+   #  name: categories
+   #   url: /categories/
+   #   weight: 10
+   # - identifier: tags
+   #   name: tags
+   #   url: /tags/
+   #   weight: 20
+   #  - name: Archive
+   #    url: archives
+   #    weight: 5
+   
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+
+# Source: https://gohugo.io/getting-started/configuration-markup/#highlight
+# Parameter meanings: https://gohugo.io/functions/highlight/
+markup:
+  tableOfContents:
+    # Without this, Hugo ToC doesn't show h4 and higher
+    # https://github.com/alex-shpak/hugo-book/issues/52
+    endLevel: 6
+
+
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    # highlight.js also doesn't use line numbers by default.
+    # The rationale is that doing so improves readability
+    # (https://highlightjs.readthedocs.io/en/latest/line-numbers.html).
+    # Therefore, I disable it by default.
+    # Note: It's possible to enable it on a specific code block by specifying
+    # ``` {lineNos=true}
+    # ```
+    lineNos: false
+    lineNumbersInTable: true
+    # false means use external CSS file
+    noClasses: false
+    noHl: false
+    # style: monokai
+    tabWidth: 4

@@ -1,0 +1,180 @@
+# Site Configuration
+baseURL: "https://www.yatan.co"
+title: "Yatan Blumenthal Vargas"
+languageCode: "en-us"
+theme: "hugo-PaperMod"
+pagination.pagerSize: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pluralizeListTitles: false
+
+# Optional Features
+googleAnalytics: "G-C4MCQHJQY0"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# Theme Parameters
+params:
+  env: "production"
+  title: "Yatan Blumenthal Vargas"
+  description: "Startups, VC, Emotional Intelligence, Mindfulness, Leadership"
+  keywords:
+    - Blog
+    - Portfolio
+    - Meditation
+    - Search Inside Yourself
+    - Mindfulness
+    - Adaptive Resilience
+  author: "Yatan Blumenthal Vargas"
+  images:
+    - "/images/yatan-logomjsmtr.webp"
+  DateFormat: "January 2, 2006"
+  defaultTheme: "auto"
+  disableThemeToggle: false
+
+  # Post Features
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  TocSide: "left"
+  math: true
+  ShowAllPagesInArchive: true
+
+  # Appearance
+  label:
+    text: "Yatan"
+    icon: "/images/yatan-logomjsmtr.webp"
+    iconHeight: 35
+
+# Profile Mode Enable
+
+  profileMode:
+    enabled: true
+    title: "Hello! I am Yatan"
+    subtitle: >
+      I support startups through [Founder Institute](https://fi.co) and [Hardware.co](https://hardware.co).  
+      Work for better team culture and communication through [Culture Design](https://culturedesign.org) & [Search Inside Yourself](http://siyli.org).  
+      And work in furthering Brain Health and finding a cure for Alzheimer's through [CerebrumDAO](https://cerebrumdao.com).
+    imageUrl: "/images/yatan-logo.webp"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: "Yatan's Picture"
+    buttons:
+      - name: "Blog"
+        url: "posts"
+      - name: "Meditations"
+        url: "meditation"
+      - name: "Book a call"
+        url: "cal"
+
+  # Enable home mode
+  homeInfoMode: false
+  homeInfoParams:
+    Title: "Hola, Hello, Hey"
+    Content: >
+      I support startups through [Founder Institute](https://fi.co) and [Hardware.co](https://hardware.co).  
+      Work for better team culture and communication through [Culture Design](https://culturedesign.org) & [Search Inside Yourself](http://siyli.org).  
+      And work in furthering Brain Health and finding a cure for Alzheimer's through [CerebrumDAO](https://cerebrumdao.com).
+
+  socialIcons:
+    - name: "linkedin"
+      url: "http://linkedin.com/in/yatanblumenthal"
+    - name: "twitter"
+      url: "https://twitter.com/yatanbv"
+    - name: "github"
+      url: "https://github.com/yatanco"
+
+  #analytics:
+   # google:
+    #  SiteVerificationTag: "XYZabc"
+    #bing:
+    #  SiteVerificationTag: "XYZabc"
+    #yandex:
+    #  SiteVerificationTag: "XYZabc"
+
+  cover:
+    linkFullImages: true
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: true
+
+  editPost:
+    URL: "https://github.com/yatanco/yatan.co"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
+# Output Formats
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Menu Configuration
+menu:
+  main:
+    - identifier: "aboutme"
+      name: "About Me"
+      url: "about"
+      weight: 5
+    - identifier: "emotionalintelligence"
+      name: "Emotional Intelligence"
+      url: "emotional-intelligence"
+      weight: 5
+    - identifier: "searchinsideyourself"
+      name: "Search Inside Yourself"
+      url: "/search-inside-yourself"
+      parent: "emotionalintelligence"
+      weight: 2
+    - name: "Blog"
+      url: "posts/"
+      weight: 5
+    - name: "Meditation"
+      url: "meditation/"
+      weight: 5
+    - name: "Archives"
+      url: "archives/"
+      weight: 5
+
+# Syntax Highlighting and Markup
+pygmentsUseClasses: true
+
+markup:
+  tableOfContents:
+    endLevel: 6
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    lineNumbersInTable: true
+    tabWidth: 4
